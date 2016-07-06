@@ -24,7 +24,7 @@
 					</div>
 					<div class="panel-body" id="tableSection">
 					{{#each table_data}}
-						<h2><span class="label label-primary">{{@index}}</span> | {{customerID}}</h2>
+						<h2><span class="label label-primary">{{this.number}}</span> | {{customerID}}</h2>
 					{{/each}}
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 					</div>
 					<div class="panel-body" id="waitlistSection">
 					{{#each waiting_data}}
-						<h2><span class="label label-primary">{{@index}}</span> | {{customerID}}</h2>
+						<h2><span class="label label-primary">{{this.number}}</span> | {{customerID}}</h2>
 					{{/each}}
 					</div>
 				</div>

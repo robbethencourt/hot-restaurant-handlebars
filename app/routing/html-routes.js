@@ -7,6 +7,8 @@ var path = require('path');
 var tdata = require('../data/table-data.js');
 var wdata = require('../data/waitinglist-data.js');
 
+var index_plus = require('../../views/helpers/indexplus.js');
+
 
 
 
@@ -23,8 +25,13 @@ module.exports = function(app){
 	// ---------------------------------------------------------------------------
 
 	app.get('/tables', function(req, res){
-		// res.sendFile(path.join(__dirname + '/../public/tables.html'));
-		console.log(tdata, wdata);
+		tdata.forEach(function(tdata, index, array){ //for each item in the tables array you are added a number property
+			tdata.number = index + 1;
+		});
+
+		wdata.forEach(function(wdata, index, array){
+			wdata.number = index + 1;
+		});
 		res.render('tables', {table_data: tdata, waiting_data: wdata});
 	});
 
