@@ -13,6 +13,13 @@ var tableArray = [
 		customerID: "afhaque89",
 		phoneNumber: "979-587-0887",
 
+	},
+	{
+		customerName: "Steve",
+		customerEmail: "steve@gmail.com",
+		customerID: "StevieB",
+		phoneNumber: "867-5309",
+
 	}
 ];
 

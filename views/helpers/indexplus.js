@@ -1,6 +1,6 @@
-var Handlebars = require('handlebars');
+// var Handlebars = require('handlebars');
 
-module.exports = Handlebars.registerHelper('indexPlus', function(context, options) {
+module.exports = function(context, options) {
 	
 
 	var i;
@@ -10,4 +10,4 @@ module.exports = Handlebars.registerHelper('indexPlus', function(context, option
 
 	return i;
 
-});
+}

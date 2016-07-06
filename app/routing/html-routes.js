@@ -25,6 +25,7 @@ module.exports = function(app){
 	// ---------------------------------------------------------------------------
 
 	app.get('/tables', function(req, res){
+		console.log(index_plus(tdata));
 		tdata.forEach(function(tdata, index, array){ //for each item in the tables array you are added a number property
 			tdata.number = index + 1;
 		});
